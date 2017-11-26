@@ -47,5 +47,14 @@ public class UT_YerushalmiTest extends TestCase{
 		Assert.assertEquals(39, jewishCalendar.getDafYomiYerushalmi().getMasechtaNumber());
 		System.out.println(hdf.formatDafYomiYerushalmi(jewishCalendar.getDafYomiYerushalmi()));
 	}
+	@Test
+	public void testLastDafOfMassechet() {
+
+		JewishCalendar jewishCalendar = new JewishCalendar(5778,9,8);
+		Assert.assertEquals(1, jewishCalendar.getDafYomiYerushalmi().getDaf());
+		Assert.assertEquals(31, jewishCalendar.getDafYomiYerushalmi().getMasechtaNumber());
+		System.out.println(hdf.formatDafYomiYerushalmi(jewishCalendar.getDafYomiYerushalmi()));
+	}
+
 
 }

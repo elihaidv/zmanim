@@ -64,13 +64,13 @@ public class YerushalmiYomiCalculator {
 		
 		// Get the number of special day to substruct
 		int specialDays = getNumOfSpecialDays(prevCycle, requested);
-		int total = dafNo - specialDays;
+		int total = dafNo - specialDays + 1;
 				
 		/* Finally find the daf. */
 		for (int j = 0; j < BLATT_PER_MASSECTA.length; j++) {
 			
 			if (total <= BLATT_PER_MASSECTA[j]) {
-				dafYomi = new Daf(masechta, total + 1);
+				dafYomi = new Daf(masechta, total);
 				break;
 			}
 			total -= BLATT_PER_MASSECTA[j];
